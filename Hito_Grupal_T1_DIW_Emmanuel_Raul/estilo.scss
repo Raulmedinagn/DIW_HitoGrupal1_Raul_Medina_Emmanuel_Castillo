@@ -1,0 +1,97 @@
+$contenedor_color: lightblue;
+$color_galeria: lightblue;
+$color_bordes: black;
+$fuente_letra: personalizado;
+@font-face {
+    font-family: $fuente_letra;
+    src: url(fuentes/Louis\ George\ Cafe\ Bold.ttf);
+}
+
+h1,
+h2 {
+    margin-left: 20px;
+}
+
+body {
+    font-family: $fuente_letra;
+    background-color: lightyellow;
+}
+
+#contenedor {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $contenedor_color;
+}
+
+#contenedor>p {
+    margin-left: 10px;
+}
+
+div.contenedor1:hover,
+div.contenedor2:hover {
+    background-color: $contenedor_color;
+    border-radius: 5px;
+}
+
+div>div.contenido:hover {
+    background-color: $color_bordes;
+    border-radius: 5px;
+}
+
+.imagen1:hover,
+.imagen2:hover,
+.imagen3:hover,
+.imagen4:hover {
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.contenedor1 {
+    margin: 10px;
+    background-color: $color_galeria;
+    display: grid;
+    visibility: inherit;
+    grid-template-columns: 2;
+    border-radius: 5px;
+}
+
+.imagen1,
+.imagen3 {
+    padding: 10px;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    grid-column: 1;
+}
+
+.imagen2,
+.imagen4 {
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+    grid-column: 2;
+}
+
+img {
+    width: 200px;
+}
+
+@keyframes cambioColor {
+    0% {
+        background-color: lightyellow;
+    }
+    100% {
+        background-color: lightgray;
+    }
+}
+
+.imagen1:hover,
+.imagen2:hover,
+.imagen3:hover,
+.imagen4:hover {
+    animation-name: cambioColor;
+    animation-duration: 2s;
+}
